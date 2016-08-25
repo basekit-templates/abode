@@ -1,0 +1,534 @@
+// -----------------------------
+// FORMS
+// -----------------------------
+
+// Global style
+// ------------
+
+form,
+.form {
+    margin-bottom: 1em;
+    .border-radius(0px);
+    .button {
+        min-height: 44px;
+        outline: none;
+    }
+    label,
+    .label {
+        font-size: 14px;
+        line-height: 24px;
+        color: @color__form-label--text;
+    }
+}
+
+legend {
+    width: 100%;
+    padding: 0 0 20px;
+    font-family: @font__h3--font-family;
+    font-size: @font__h3--font-size;
+    line-height: @font__h3--line-height;
+    color: @color__form-legend--text;
+    font-weight: @font__h3--font-weight;
+}
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+select,
+.input--single-line {
+    min-height: 44px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    .border-radius(0px);
+    border-bottom: 1px solid darken(@color__body--background, 20%);
+}
+
+.signupform,
+.blogsearch {
+    input[type="search"],
+    input[type="email"],
+    select {
+        padding: 0;
+        &:focus {
+            padding: 0 10px;
+            border-color: @color-swatch3;
+            .transition( all, 0.5s, ease );
+        }
+    }
+}
+
+.ecomproductslist input[type="search"] {
+    &:focus {
+        border-color: @color-swatch3;
+    }
+    @media only screen and (max-width : 600px) {
+        border: 1px solid darken(@color__body--background, 20%);
+    }
+}
+
+.select-wrap {
+    position: relative;
+    border-bottom: 1px solid darken(@color__body--background, 20%);
+    &:hover {
+        border-bottom: 1px solid @color-swatch3;
+    }
+    &:after {
+        content: '\f0d7';
+        font-family: 'FontAwesome', sans-serif;
+        display: inline-block;
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+        font-size: 14px;
+        color: @color-swatch3;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -0.5em;
+        z-index: 900;
+    }
+}
+
+select {
+    min-height: 20px;
+    height: auto;
+    width: 100%;
+    padding: 0 10px 0 0;
+    border-bottom: none;
+    color: @color-swatch3;
+    font-family: @font__p--font-family;
+    font-size: 14px;
+    font-weight: @font__p--font-weight;
+    line-height: @font__p--line-height;
+    letter-spacing: @font__p--letter-spacing;
+    // Removes default arrow in Firefox
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+}
+
+// Hides arrow in IE
+select::-ms-expand {
+    opacity: 0;
+}
+
+code,
+pre,
+th {
+    background-color: transparent;
+}
+
+pre,
+table,
+th,
+td {
+    border: 2px solid darken(@color__body--background, 10%);
+}
+
+
+
+
+// Contact Form
+// --------------------------------
+
+.contactform .form-group {
+
+        .flex-display;
+        .flex-wrap(nowrap);
+        .justify-content(space-between);
+        .align-items(flex-start);
+        .align-content(stretch);
+
+    margin-bottom: 0;
+    border: 1px solid darken(@color__body--background, 20%);
+
+    &:first-child {
+
+        .align-items(center);
+
+        border-bottom: none;
+    }
+    &:last-child {
+        border: none;
+        margin: 20px 0;
+        padding: 0;
+    }
+    .label {
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+
+        margin-bottom: 0;
+        padding: 0 20px;
+        @media @mobile {
+            padding: 0 10px;
+        }
+    }
+
+    .label--message {
+        padding-top: 10px;
+    }
+
+    input[type="email"],
+    textarea {
+        border: none;
+    }
+
+    input[type="email"] {
+        border-left: 1px solid darken(@color__body--background, 20%);
+        .border-radius(0px);
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+}
+
+// Responsive Columns
+
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .contactform .form-group .label {
+        padding: 0 10px;
+    }
+}
+
+
+
+
+// Signup Form
+// --------------------------------
+
+.signupform {
+    .legend {
+        display: none;
+    }
+    .label {
+        padding: 0 0 20px;
+        font-family: @font__h3--font-family;
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+        color: @color__form-legend--text;
+        font-weight: @font__h3--font-weight;
+    }
+}
+
+
+
+
+// Signup Form
+// Blog Search
+// --------------------------------
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+    .signupform__form-body,
+    .blogsearch__form-body {
+
+        .flex-display;
+        .flex-wrap(nowrap);
+        .justify-content(space-between);
+        .align-items(flex-end);
+        .align-content(stretch);
+
+    }
+
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+
+    .form .button {
+        &.signupform__button,
+        &.blogsearch__button {
+            min-height: 44px;
+            padding: 0 18px;
+            white-space: nowrap;
+        }
+    }
+}
+
+.responsivecolumns {
+    .signupform__form-body,
+    .blogsearch__form-body {
+        display: inline-block;
+        width: 100%;
+    }
+    .signupform__form-group:first-child,
+    .blogsearch__form-group:first-child {
+        width: 100%;
+    }
+}
+
+
+
+
+// Blog Search
+// --------------------------------
+
+.blogsearch {
+    label {
+        display: none;
+    }
+    .form-body {
+        .align-items(flex-start);
+    }
+    .form .button.blogsearch__button {
+        vertical-align: top;
+    }
+    .form-group {
+        vertical-align: top;
+    }
+    @media @mobile {
+        .form-group .input {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+// Profile Signup Form
+// --------------------------------
+
+.profile .signupform {
+    // Label for tablet and desktop
+    .label {
+        padding: 0;
+        margin: 0;
+        font-family: @font__p--font-family;
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
+        @media only screen and (min-width: 481px) {
+            float: left;
+        }
+    }
+    // Input text align for mobile
+    .form input[type="email"] {
+        @media @mobile {
+            text-align: center;
+        }
+    }
+    @media @mobile {
+        .form-group:first-child {
+            margin-bottom: 10px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+// Ecom forms
+// --------------------------------
+
+// Product Filters
+
+.product-filters .form {
+    text-align: left;
+    .fieldset--search .ecomproductslist__legend {
+        display: none;
+    }
+    .form-group {
+        margin-right: 0;
+    }
+    .legend {
+        display: none;
+    }
+    .label,
+    .label--search {
+        margin: 0;
+        color: @color__form-label--text;
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+        text-transform: uppercase;
+    }
+    @media only screen and (max-width : 600px) {
+        .form-group,
+        .select,
+        .button {
+            width: 100%;
+        }
+        .label--search {
+            margin: 10px 0;
+        }
+    }
+}
+
+.ecomproductslist .form,// Ecom Form
+.ecomproductslist .fieldset--filters .form-body,// Ecom Filters
+.ecomproductslist .fieldset--search .form-body { // Ecom Search
+
+    .flex-display;
+    .flex-wrap(nowrap);
+    .justify-content(space-between);
+    .align-items(flex-end);
+    .align-content(stretch);
+
+}
+
+// Flexbox form on Desktop
+.fieldset--search {
+
+    .flex-order(1);
+
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    .input--search,
+    .button {
+        min-height: 20px;
+    }
+
+    .form-group:first-child {
+        width: 100%;
+    }
+
+    .input--search {
+        font-size: 14px;
+        height: 34px;
+    }
+
+}
+.fieldset--filters {
+
+    .flex-order(0);
+
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+// Flexbox form on Tablet
+.ecomproductslist .form,// Ecom Form
+.ecomproductslist .fieldset--filters .form-body,// Ecom Filters
+.ecomproductslist .fieldset--search .form-body { // Ecom Search
+    @media only screen and (max-width: 600px)  {
+
+        .flex-display;
+        .flex-wrap(wrap);
+        .justify-content(flex-start);
+        .align-items(stretch);
+        .align-content(stretch);
+
+        .form-group {
+            margin-right: 0;
+        }
+    }
+}
+
+// Style for tablet and desktop
+@media only screen and (min-width : 600px) {
+    .ecomproductslist .fieldset--filters .form-group {
+        margin-right: 20px;
+
+        -ms-flex: 1 1 25%;
+        -webkit-flex: 1 1 25%;
+        flex: 1 1 25%;
+
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+
+        .select {
+            width: 100%;
+        }
+    }
+}
+
+// Ecom form on Responsive Columns
+.responsivecolumns {
+    .listing-title {
+        padding: 0px 0 20px;
+    }
+    .ecomproductslist .form,// Ecom Form
+    .ecomproductslist .fieldset--filters .form-body,// Ecom Filters
+    .ecomproductslist .fieldset--search .form-body { // Ecom Search
+
+        .flex-display;
+        .flex-wrap(wrap);
+        .justify-content(flex-start);
+        .align-items(stretch);
+        .align-content(stretch);
+
+        .form-group:last-child {
+            margin-right: 0;
+        }
+    }
+    .fieldset--search,
+    .fieldset--filters {
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+    .ecomproductslist .fieldset--filters .form-body {
+        padding: 20px 10px 0;
+        .form-group {
+            margin-right: 0;
+
+            -webkit-flex: 1 0 100%;
+            -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+        }
+    }
+    .ecomproductslist .fieldset--search .form-body {
+        padding: 10px;
+        .form-group:first-child {
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            margin-right: 0;
+        }
+    }
+    .ecomproductslist input[type="search"] {
+        border: 1px solid darken(@color__body--background, 20%);
+    }
+    .product-item {
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+// Ecom Clear-Button
+// -----------------
+
+.ecomproductslist .form .fieldset--search .button--clear {
+    margin-left: 10px;
+    white-space: nowrap;
+    text-align: center;
+    @media only screen and (max-width : 600px) {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

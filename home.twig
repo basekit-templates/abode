@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+{% block class %}template-default{% endblock %}
+{% block content %}
+
+    <!-- Header -->
+    <div class="template-header">
+        <div class="template-header-container">
+            <div class="brand">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {
+                    "business": "profile"
+                })|raw}}
+            </div>
+
+            {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+
+        </div>
+    </div>
+
+    <div class="homepage-gallery">
+        <!-- Gallery Widget -->
+        {{widget('gallery', 'gallery-home',
+            {'albumRef':0,
+            'showDescription': true,
+            'showTitle': true,
+            'images':
+            [
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img1.jpg'), 'title':'Lorem Ipsum', 'description':'Duis mattis semper ipsum, lobortis rutrum pretium ast magnimus.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img2.jpg'), 'title':'Vivamus Magnis', 'description':'Praesent varius sapien non enim semper quis tellus aliquet odiao.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img3.jpg'), 'title':'Praesent Magna', 'description':'Dignissim in ipsum luctus, commodore posuere estemor tellus.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img4.jpg'), 'title':'Lorem Ipsum', 'description':'Duis mattis semper ipsum, lobortis rutrum pretium ast magnimus.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img5.jpg'), 'title':'Vivamus Magnis', 'description':'Praesent varius sapien non enim semper quis tellus aliquet odiao.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img6.jpg'), 'title':'Praesent Magna', 'description':'Dignissim in ipsum luctus, commodore posuere estemor tellus.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img7.jpg'), 'title':'Lorem Ipsum', 'description':'Duis mattis semper ipsum, lobortis rutrum pretium ast magnimus.'},
+            {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/img8.jpg'), 'title':'Vivamus Magnis', 'description':'Praesent varius sapien non enim semper quis tellus aliquet odiao.'}
+            ]
+        })|raw}}
+    </div>
+
+
+    <section class="container">
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
+    </section>
+
+{% endblock %}
