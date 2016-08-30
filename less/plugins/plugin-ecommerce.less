@@ -250,8 +250,7 @@
     }
     .product-item-details {
         position: relative;
-        top: -30px;
-        width: 65%;
+        top: -64px;
         padding: 5px 15px;
         margin: 0 0 0 auto;
         text-align: right;
@@ -320,6 +319,7 @@
 .product-item-image, .product-item-image .image-link {
     height: 100%;
     line-height: 100%;
+    max-height: 600px;
 }
 
 .product-item-image,
@@ -328,6 +328,26 @@
 .product-image .image-link,
 .basket-item-image .image-link {
     background-color: transparent;
+}
+
+// Product Item Nth Child Flex
+
+.ecomproductslist__product-item {
+    &:first-child,
+    &:nth-child(n+4):nth-child(-n+5),
+    &:nth-child(n+8):nth-child(-n+9),
+    &:nth-child(n+12):nth-child(-n+13),
+    &:nth-child(n+16):nth-child(-n+17),
+    &:nth-child(n+20):nth-child(-n+21),
+    &:nth-child(n+24):nth-child(-n+25),
+    &:nth-child(n+28):nth-child(-n+29) {
+        -webkit-flex: 1 1 55%!important;
+        -ms-flex: 1 1 55%!important;
+        flex: 1 1 55%!important;
+    }
+    &:nth-child(odd) {
+        margin-right: 1%;
+    }
 }
 
 // Product Details
