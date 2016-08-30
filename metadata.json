@@ -1,11 +1,12 @@
 {
-    "name": "collective",
+    "name": "abode",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
-    "screenshot": "collective-screenshot.jpg",
+    "screenshot": "abode-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home", "blogpost"],
     "images":[
+        "images/image-1.jpg",
         "images/gallery/img1.jpg",
         "images/gallery/img2.jpg",
         "images/gallery/img3.jpg",

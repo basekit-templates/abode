@@ -295,9 +295,7 @@
 // Product Item
 
 .product-item {
-    position: relative;
-    width: 32%;
-    margin-bottom: 20px;
+    flex: 1 1 30% !important;
     // Display 100% at mobile
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -317,6 +315,11 @@
             line-height: normal;
         }
     }
+}
+
+.product-item-image, .product-item-image .image-link {
+    height: 100%;
+    line-height: 100%;
 }
 
 .product-item-image,
