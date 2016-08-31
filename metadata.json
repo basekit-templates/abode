@@ -221,6 +221,11 @@
             "color__image-title--text": "@color__h3--text",
             "color__image-description--text": "@color__p--text"
         },
+        "gallery": {
+            "color__gallery-caption--background" : "fade(#000, 10%)",
+            "color__gallery-title--text" : "#fff",
+            "color__gallery-description--text" : "#fff"
+        },
         "twitter": {
             "color__twitter-item--background": "@color-swatch7",
             "color__twitter-account-name--text": "@color-swatch3",
