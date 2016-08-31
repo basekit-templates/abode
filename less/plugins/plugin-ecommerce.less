@@ -94,14 +94,14 @@
     }
     .product-price {
         color: @color__ecomproduct-price--text;
-        font-family: @font__p--font-family;
-        font-size: @font__p--font-size;
-        line-height: @font__p--line-height;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
     }
     .legend {
-        font-family: @font__p--font-family;
-        font-size: @font__p--font-size;
-        line-height: @font__p--line-height;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
     }
 }
 
@@ -250,7 +250,7 @@
     }
     .product-item-details {
         position: relative;
-        padding: 5px 15px;
+        padding: 15px;
         margin: 0 0 0 auto;
         text-align: right;
         background-color: @color-swatch7;
@@ -332,6 +332,7 @@
 // Product Item Nth Child Flex
 
 .ecomproductslist__product-item {
+    margin-bottom: 1%;
     &:first-child,
     &:nth-child(n+4):nth-child(-n+5),
     &:nth-child(n+8):nth-child(-n+9),
@@ -343,7 +344,6 @@
         -webkit-flex: 1 1 55%!important;
         -ms-flex: 1 1 55%!important;
         flex: 1 1 55%!important;
-        margin-bottom: 1%;
     }
     &:nth-child(odd) {
         margin-right: 1%;
@@ -357,12 +357,20 @@
     h3,
     .title-link,
     .listing-order {
-        font-family:@font__p--font-family;
-        font-size:@font__p--font-size;
-        line-height:@font__p--line-height;
-        font-weight: @font__p--font-weight;
+        font-family:@font__h2--font-family;
+        font-size:@font__h2--font-size;
+        line-height:@font__h2--line-height;
+        font-weight: @font__h2--font-weight;
         color: @color__h3--text;
-        letter-spacing: @font__p--letter-spacing;
+        letter-spacing: @font__h2--letter-spacing;
+    }
+    p {
+        font-family:@font__h2--font-family;
+        font-size:@font__h2--font-size;
+        line-height:@font__h2--line-height;
+        font-weight: @font__h2--font-weight;
+        color: @color__h3--text;
+        letter-spacing: @font__h2--letter-spacing;
     }
 }
 
@@ -379,10 +387,6 @@
             padding: 10px 0 20px;
         }
     }
-}
-
-.product-item-price {
-    font-weight: 700;
 }
 
 .ecomproductslist,
