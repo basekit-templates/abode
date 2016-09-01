@@ -341,12 +341,16 @@
     &:nth-child(n+20):nth-child(-n+21),
     &:nth-child(n+24):nth-child(-n+25),
     &:nth-child(n+28):nth-child(-n+29) {
-        -webkit-flex: 1 1 55%!important;
-        -ms-flex: 1 1 55%!important;
-        flex: 1 1 55%!important;
+        -webkit-flex: 1 1 60%!important;
+        -ms-flex: 1 1 60%!important;
+        flex: 1 1 60%!important;
     }
     &:nth-child(odd) {
         margin-right: 1%;
+    }
+    @media @tablet {
+         display: block;
+         width: 100%;
     }
 }
 
@@ -355,8 +359,8 @@
 .ecomproductslist,
 .ecomfeaturedproducts {
     h3,
-    .title-link,
-    .listing-order {
+    .title-link 
+    {
         font-family:@font__h2--font-family;
         font-size:@font__h2--font-size;
         line-height:@font__h2--line-height;
@@ -371,6 +375,14 @@
         font-weight: @font__h2--font-weight;
         color: @color__h3--text;
         letter-spacing: @font__h2--letter-spacing;
+    }
+    .listing-order {
+        font-family:@font__p--font-family;
+        font-size:@font__p--font-size;
+        line-height:@font__p--line-height;
+        font-weight: @font__p--font-weight;
+        color: @color__h3--text;
+        letter-spacing: @font__p--letter-spacing;
     }
 }
 
