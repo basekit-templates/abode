@@ -1,7 +1,7 @@
-Collective
+Abode
 ==========
 
-BaseKit Template
+V8 BaseKit Template
 
 License
 -------
