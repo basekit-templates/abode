@@ -60,9 +60,9 @@
             "letter-spacing": "0px"
         },
         "font5": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Poppins\", \"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "16px",
-            "font-weight": "400",
+            "font-weight": "300",
             "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "0px"
@@ -120,7 +120,7 @@
         },
         "site": {
             "color__body--background": "@color-swatch1",
-            "color__link--text": "@color__secondary",
+            "color__link--text": "@color-swatch2",
             "color__companyname--text": "@font-swatch10-color",
 
             "font__companyname--font-family" : "@font-swatch10-font-family",
@@ -242,9 +242,9 @@
         },
         "ecommerce": {
             "color__ecomproductslist-label--text": "@color__form-label--text",
-            "color__ecomproductslist-product-title--text": "@color__secondary",
+            "color__ecomproductslist-product-title--text": "@color__h2--text",
             "color__ecomproduct-title--text": "@color__h1--text",
-            "color__ecomproduct-price--text": "@color__p--text",
+            "color__ecomproduct-price--text": "@color-swatch2",
             "color__ecombasket-button--background": "@color__button--background",
             "color__ecombasket-button--background--hover": "@color__button--background--hover",
             "color__ecombasket-button--text": "@color__button--text"

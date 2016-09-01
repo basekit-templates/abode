@@ -329,6 +329,9 @@
 // Remove margin from ul nav list and widget
 .widget[data-widget-type="extendednavigation"] {
     margin-bottom: 0;
+    @media @tablet {
+        padding-top: 20px;
+    }
 }
 
 .navigation-list {
@@ -375,21 +378,6 @@
     .navigation-list--children .item-name {
         @media @tablet {
             padding: 14px;
-        }
-    }
-    @media only screen and (min-width: 769px) {
-        .navigation-item:first-child .item-name {
-            padding-left: 0;
-        }
-        .navigation-item:last-child .item-name {
-            padding-right: 0;
-        }
-        .navigation-list--children {
-            .navigation-item:first-child .item-name,
-            .navigation-item:last-child .item-name,
-            .navigation-item {
-                padding: 7px 14px;
-            }
         }
     }
 }

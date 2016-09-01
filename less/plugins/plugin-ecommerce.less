@@ -150,9 +150,9 @@
     float: right;
     width: 47%;
     text-align: center;
-    background-color: @color__button--background--hover;
+    background-color: @color-swatch2;
     &:hover {
-        background-color: @color__button--background;
+        background-color: lighten(@color-swatch2,10%);
     }
     @media only screen and (max-width: 450px) {
         width: 100%;
@@ -211,27 +211,10 @@
         line-height: bkscale(@font__p--line-height,0.9);
     }
     p {
-        color: @color__form-label--text;
+        color: @color__h1--text;
     }
 }
 
-// View Basquet Button
-
-.view-basket-wrap .button {
-    min-height: 44px;
-    padding: 8px 12px;
-    float: right;
-    width: 47%;
-    text-align: center;
-    background-color: @color__button--background--hover;
-    &:hover {
-        background-color: @color__button--background;
-    }
-    @media only screen and (max-width: 450px) {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
 
 
 
@@ -293,10 +276,14 @@
 // Product Item
 
 .product-item {
+    -webkit-flex: 1 1 30%!important;
+    -ms-flex: 1 1 30%!important;
     flex: 1 1 30% !important;
     // Display 100% at mobile
-    @media only screen and (max-width: 600px) {
-        width: 100%;
+    @media @tablet {
+        -webkit-flex: 1 1 10%!important;
+        -ms-flex: 1 1 10%!important;
+        flex: 1 1 100%!important;
     }
 }
 
@@ -331,7 +318,7 @@
 
 // Product Item Nth Child Flex
 
-.ecomproductslist__product-item {
+.product-item {
     margin-bottom: 1%;
     &:first-child,
     &:nth-child(n+4):nth-child(-n+5),
@@ -365,16 +352,16 @@
         font-size:@font__h2--font-size;
         line-height:@font__h2--line-height;
         font-weight: @font__h2--font-weight;
-        color: @color__h3--text;
+        color: @color__h2--text;
         letter-spacing: @font__h2--letter-spacing;
     }
     p {
-        font-family:@font__h2--font-family;
-        font-size:@font__h2--font-size;
-        line-height:@font__h2--line-height;
-        font-weight: @font__h2--font-weight;
-        color: @color__h3--text;
-        letter-spacing: @font__h2--letter-spacing;
+        font-family:@font__h3--font-family;
+        font-size:@font__h3--font-size;
+        line-height:@font__h3--line-height;
+        font-weight: @font__h3--font-weight;
+        color: @color__ecomproduct-price--text;
+        letter-spacing: @font__h3--letter-spacing;
     }
     .listing-order {
         font-family:@font__p--font-family;
@@ -682,6 +669,26 @@
         color: @color__ecombasket-button--text;
         &:hover {
             background-color: @color__ecombasket-button--background--hover;
+        }
+    }
+}
+
+.responsivecolumns {
+    .columns-three-left,
+    .columns-three-middle,
+    .columns-three-right,
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .product-item-image, .product-item-image .image-link {
+            height: 200px;
+            line-height: 200px;
+            max-height: 100%;
+        }
+        .ecomproductslist .title-link {
+            font-size: 20px;
+            line-height: 40px;
         }
     }
 }
