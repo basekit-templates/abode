@@ -8,8 +8,7 @@
 
 // 1. #LESS Includes
 // 2. #Global Styles
-// 2. #PAGE SETTINGS
-// 3. #Mixins
+// 2. #Page Container
 
 
 // -----------------------------
@@ -126,6 +125,7 @@ p {
 
 
 
+
 // -----------------------------
 // Page Container
 // -----------------------------
@@ -135,9 +135,6 @@ p {
         display: inline-block;
         width: 90%;
         margin: 50px 5% 0;
-        &:first-child {
-            margin: 0 5% 0;
-        }
         @media only screen and (min-width: 1300px) {
             display: block;
             width: 1200px;
@@ -155,6 +152,16 @@ p {
         }
         [data-name="image"] {
             margin: 15px auto;
+        }
+    }
+}
+
+.template-default {
+    .container {
+        .widget {
+            &:first-child {
+                margin: 0 auto 0;
+            }
         }
     }
 }
