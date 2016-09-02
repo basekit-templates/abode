@@ -1129,6 +1129,10 @@
 .homepage-gallery {
     .gallery .image-link {
         min-height: 450px;
+        @media @mobile {
+            height: 250px;
+            min-height: 250px;
+        }
     }
     .gallery .gallery-item {
         &:first-child,
@@ -1150,7 +1154,7 @@
 }
 
 .homepage-gallery {
-    .square {
+    .gallery .gallery-item {
         &:nth-child(odd) {
             margin-right: 1%;
             @media @tablet {
