@@ -2,24 +2,28 @@
 {% block class %}template-default{% endblock %}
 {% block content %}
 
-    <!-- Header -->
-    <div class="template-header">
-        <div class="template-header-container">
-            <div class="brand">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {
-                    "business": "profile"
-                })|raw}}
+    <div class="bk-pt-default">
+
+        <!-- Header -->
+        <div class="template-header">
+            <div class="template-header-container">
+                <div class="brand">
+                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                    {{widget('companyname', 'companyname', {
+                        "business": "profile"
+                    })|raw}}
+                </div>
+    
+                {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+    
             </div>
-
-            {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-
         </div>
-    </div>
+    
+        <!-- Main Widet Zone -->
+        <section class="container">
+            {{zone('main')|raw}}
+        </section>
 
-    <!-- Main Widet Zone -->
-    <section class="container">
-        {{zone('main')|raw}}
-    </section>
+    </div>
 
 {% endblock %}
