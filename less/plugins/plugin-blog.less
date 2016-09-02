@@ -78,7 +78,13 @@
 
     .title-link {
         color: @color__blogpostlist-title--text;
+        font-family:@font__h3--font-family;
+        font-size:@font__h3--font-size;
+        line-height:@font__h3--line-height;
+        font-weight: @font__h3--font-weight;
+        letter-spacing: @font__h3--letter-spacing;
     }
+
     .title-link,
     .read-more {
         &:hover {
@@ -86,12 +92,14 @@
             color: lighten(@color-swatch3, 10%);
         }
     }
+
     .post-footer .timestamp {
         font-size: 14px;
         line-height: 24px;
         color: darken(@color__body--background, 30%);
         text-transform: uppercase;
     }
+    
 }
 
 // Pagination List
