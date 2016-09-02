@@ -20,7 +20,7 @@
             "color2":"#24bb91",
             "color3":"#141426",
             "color4":"#141426",
-            "color5":"#75757b",
+            "color5":"#8e8e8e",
             "color6":"#b7b7b7",
             "color7":"#ffffff"
         }
@@ -63,7 +63,7 @@
             "font-family": "\"Poppins\", \"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "300",
-            "line-height": "26px",
+            "line-height": "30px",
             "color": "@color-swatch5",
             "letter-spacing": "0px"
         },
