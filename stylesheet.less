@@ -109,6 +109,10 @@ p {
     letter-spacing: @font__p--letter-spacing;
 }
 
+h1, h2, h3, h4, p {
+    padding-bottom: 0;
+}
+
 .button {
     color: @color__button--text;
     font-family: @font__button--font-family;
@@ -148,6 +152,9 @@ p {
             display: inline-block;
             width: 100%;
             margin: 15px auto;
+            @media @mobile {
+                margin: 10px auto;
+            }
         }
         [data-name="image"] {
             margin: 15px auto;
