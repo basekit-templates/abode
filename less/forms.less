@@ -94,7 +94,6 @@ select,
 }
 
 select {
-    min-height: 20px;
     height: auto;
     width: 100%;
     padding: 0 10px 0 0;
@@ -398,18 +397,12 @@ td {
     -ms-flex-item-align: auto;
     align-self: auto;
 
-    .input--search,
-    .button {
-        min-height: 20px;
-    }
-
     .form-group:first-child {
         width: 100%;
     }
 
     .input--search {
         font-size: 14px;
-        height: 34px;
     }
 
 }
@@ -420,28 +413,15 @@ td {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    @media only screen and (max-width: 600px)  {
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
 
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
-}
-
-// Flexbox form on Tablet
-.ecomproductslist .form,// Ecom Form
-.ecomproductslist .fieldset--filters .form-body,// Ecom Filters
-.ecomproductslist .fieldset--search .form-body { // Ecom Search
-    @media only screen and (max-width: 600px)  {
-
-        .flex-display;
-        .flex-wrap(wrap);
-        .justify-content(flex-start);
-        .align-items(stretch);
-        .align-content(stretch);
-
-        .form-group {
-            margin-right: 0;
-        }
-    }
 }
 
 // Style for tablet and desktop
@@ -459,6 +439,24 @@ td {
 
         .select {
             width: 100%;
+        }
+    }
+}
+
+// Flexbox form on Tablet
+.ecomproductslist .form,// Ecom Form
+.ecomproductslist .fieldset--filters .form-body,// Ecom Filters
+.ecomproductslist .fieldset--search .form-body { // Ecom Search
+    @media only screen and (max-width: 600px)  {
+
+        .flex-display;
+        .flex-wrap(wrap);
+        .justify-content(flex-start);
+        .align-items(stretch);
+        .align-content(stretch);
+
+        .form-group {
+            margin-right: 0;
         }
     }
 }
