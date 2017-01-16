@@ -2,6 +2,11 @@
 {% block class %}template-default{% endblock %}
 {% block content %}
 
+                        {% if plugins.ecommerce.store.live %}
+        <div class="header-basket">
+            {{widget('ecombasket', 'shopbasket', {})|raw}}
+        </div>
+        {% endif %}
     <!-- Header -->
     <div class="template-header">
         <div class="template-header-container">
