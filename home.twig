@@ -4,7 +4,7 @@
 
     <!-- Header -->
     <div class="template-header">
-                            {% if plugins.ecommerce.store.live %}
+        {% if plugins.ecommerce.store.live %}
         <div class="header-basket">
             {{widget('ecombasket', 'shopbasket', {})|raw}}
         </div>
