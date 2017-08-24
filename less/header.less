@@ -126,6 +126,17 @@
     z-index: 999;
 }
 
+.language-selector + .template-header .header-basket {
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1300px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
 
 // --------------------------------
 // nav
@@ -197,7 +208,7 @@
         .align-items(center);
         .align-content(space-between);
         @media @tablet {
-            display: block;
+            display: inline-block;
         }
     }
     .brand {
