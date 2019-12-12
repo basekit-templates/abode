@@ -5,6 +5,7 @@
     "screenshot": "abode-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
+    "versionTenCompatible": 1,
     "images":[
         "images/image-1.jpg",
         "images/gallery/img1.jpg",
