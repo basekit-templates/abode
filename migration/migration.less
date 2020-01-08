@@ -1,1 +1,96 @@
-migration.less
+
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    .container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+
+    .container .widget[data-name="row"],
+    .container .widget[data-name="row"] .widget {
+        margin: 0;
+        width: auto;
+
+        @media @tablet {
+            padding: 0;
+        }
+
+        .widget {
+            padding: 0;
+        }
+    }
+
+
+    .container .widget[data-name="row"],
+    .container .widget {
+        display: block;
+    }
+
+
+    [data-name="row"] .contactform__form-group {
+        display: block;
+    }
+
+
+    [data-name="row"] select {
+        line-height: 44px;
+    }
+
+
+    [data-name="row"] .select-wrap:after {
+        right: 12px;
+    }
+
+
+    [data-name="row"] .blogpostlist__post-footer {
+        padding: 0 20px;
+    }
+
+
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        width: 90%;
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 3em;
+
+        @media @mobile {
+            margin-top: 1em;
+        }
+    }
+
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 50px;
+    }
+}
