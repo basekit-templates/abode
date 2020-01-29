@@ -269,14 +269,24 @@ td {
 }
 
 .responsivecolumns {
-    .signupform__form-body,
-    .blogsearch__form-body {
-        display: inline-block;
-        width: 100%;
-    }
-    .signupform__form-group:first-child,
-    .blogsearch__form-group:first-child {
-        width: 100%;
+    // Three Columns
+    .columns-three-left,
+    .columns-three-middle,
+    .columns-three-right,
+    // Four Columns
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .signupform__form-body,
+        .blogsearch__form-body {
+            display: inline-block;
+            width: 100%;
+        }
+        .signupform__form-group:first-child,
+        .blogsearch__form-group:first-child {
+            width: 100%;
+        }
     }
 }
 
