@@ -35,11 +35,9 @@
             $(document).on("click", ".navigation-toggle", function() {
                 $( ".bk-extendednavigation" ).toggleClass( "open" );
             });
-            // Togglse class open to display/hide folders
-            $( ".navigation-item.folder" ).each(function() {
-                $( this ).click(function() {
-                    $( this ).toggleClass( "open" );
-                });
+            // Toggles class open to display/hide folders
+            $('.js-folder').click(function(){
+                $(this).toggleClass('open').siblings('.open').removeClass('open');
             });
         </script>
 
